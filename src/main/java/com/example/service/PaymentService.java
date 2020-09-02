@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-@Service
+@Service //necessary for spring to maintain relationships
 public class PaymentService {
 
-    @Autowired
+    @Autowired //handles dependency injection of service
     private PaymentRepository repository;
 
     public Payment doPayment(Payment payment) {
-        payment.setTransactionId(UUID.randomUUID().toString());
+        payment.setTransactionId(UUID.randomUUID().toString()); //just setting transaction id to random number
         return repository.save(payment);
     }
 }

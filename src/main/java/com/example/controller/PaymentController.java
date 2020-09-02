@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController //necessary for spring to maintain relationships
 @RequestMapping("/payment")
 public class PaymentController {
 
-    @Autowired
+    @Autowired //handles dependency injection of service
     private PaymentService service;
 
     @PostMapping("/doPayment")

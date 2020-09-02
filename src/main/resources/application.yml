@@ -1,6 +1,6 @@
 server:
   port: 9191
 spring:
-  h2:
-    console:
-      enabled: true
+  h2: #in memory database just for this example purpose, can create data.sql in src/main/resources for sql commands
+    console: #we will use a different database but will be configured similarly here
+      enabled: true #enables simple console to view data
