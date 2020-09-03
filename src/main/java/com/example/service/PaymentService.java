@@ -20,6 +20,10 @@ public class PaymentService {
         return repository.save(payment);
     }
 
+    public Payment findPaymentHistoryByOrderId(int orderId) {
+        return repository.findByOrderId(orderId);
+    }
+
     public String paymentProcessing() {
         return new Random().nextBoolean() ? "success" : "false";
     }

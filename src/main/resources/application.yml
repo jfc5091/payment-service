@@ -4,3 +4,18 @@ spring:
   h2: #in memory database just for this example purpose, can create data.sql in src/main/resources for sql commands
     console: #we will use a different database but will be configured similarly here
       enabled: true #enables simple console to view data
+  application:
+    name: PAYMENT-SERVICE
+#for mysql it will look something like this
+#datasource:
+  #     driverClassName: com.mysql.jdbc.Driver
+  #     url: jdbc:mysql://localhost/test
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
